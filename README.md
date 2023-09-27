@@ -1,38 +1,47 @@
-# create-svelte
+# Marthox
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Description
 
-## Creating a project
+Marthox is a web portfolio that showcases my projects and skills. The idea behind it is to have a simple and clean design that is easy to navigate and understand. So everyone interested in my work can easily find what they are looking for and contact me.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How to run the project
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Development
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To build and run the project for the first time, use the following command:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+docker-compose -f docker-compose.dev.yml up --build
 ```
 
-## Building
-
-To create a production version of your app:
+To build the project without running it, use the following command:
 
 ```bash
-npm run build
+docker-compose -f docker-compose.dev.yml build
 ```
 
-You can preview the production build with `npm run preview`.
+Once the project has been built, you can run it using the following command:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+docker-compose -f docker-compose.dev.yml up
+```
+
+### Production
+
+To build and run the project for the first time, use the following command:
+
+```bash
+docker-compose -f docker-compose.prod.yml up --build
+```
+
+To build the project without running it, use the following command:
+
+```bash
+docker-compose -f docker-compose.prod.yml build
+```
+
+Once the project has been built, you can run it using the following command:
+
+```bash
+docker-compose -f docker-compose.prod.yml up
+```
