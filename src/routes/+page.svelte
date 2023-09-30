@@ -1,8 +1,9 @@
 <script>
     let page_header = "Hi, I'm Mateo... aka Marthox."
+    let page_header_size = page_header.length
 </script>
 
-<div class="landing-page-container">
+<div class="landing-page-container" style="--header-size: {page_header_size}">
     <div class="typewriter-container">
         <h1 class="landing-page-header">
             {page_header}
@@ -41,7 +42,7 @@
         white-space: nowrap;
         overflow: hidden;
         animation:
-            typing 3s steps(29),
+            typing 3s steps(var(--header-size)),
             cursor 0.4s step-end infinite alternate;
     }
 
